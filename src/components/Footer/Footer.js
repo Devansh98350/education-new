@@ -134,7 +134,7 @@ const Footer = () => {
                 </a>
               </p>
               <p>
-                <Link to="/refund-rules">Refund Policy</Link>
+                <Link href="/refund-rules">Refund Policy</Link>
               </p>
               <p>
                 <a
@@ -154,34 +154,34 @@ const Footer = () => {
                 </a>
               </p>
               <p>
-                <Link to="/careers">Careers</Link>
+                <Link href="/careers">Careers</Link>
               </p>
             </div>
             <div className="footer-col">
               <h2>Quick Links</h2>
               <p>
-                <Link to="/fees-structure">Fee Structure</Link>
+                <Link href="/fees-structure">Fee Structure</Link>
               </p>
               <p>
-                <Link to="/board-batches">Board Batches</Link>
+                <Link href="/board-batches">Board Batches</Link>
               </p>
               <p>
-                <Link to="/terms-and-conditions">Terms & Condition</Link>
+                <Link href="/terms-and-conditions">Terms & Condition</Link>
               </p>
               <p>
-                <Link to="/foundation-batches">Foundation Batches</Link>
+                <Link href="/foundation-batches">Foundation Batches</Link>
               </p>
               <p>
-                <Link to="/engineering-batches">Engineering Batches</Link>
+                <Link href="/engineering-batches">Engineering Batches</Link>
               </p>
               <p>
-                <Link to="/admission-process">Admission Process</Link>
+                <Link href="/admission-process">Admission Process</Link>
               </p>
               <p>
-                <Link to="/medical-batches">Medical Batches</Link>
+                <Link href="/medical-batches">Medical Batches</Link>
               </p>
               <p>
-                <Link to="/our-policy">Privacy & Policy</Link>
+                <Link href="/our-policy">Privacy & Policy</Link>
               </p>
             </div>
           </div>

@@ -272,7 +272,7 @@ const Navbar = () => {
       >
         <Link
           className="nav-link dropdown-toggle"
-          href=" "
+          href="#"
           role="button"
           style={{
             border: "none",
@@ -289,7 +289,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Engineering</h3>
                 <Link
-                  to="/engineering-batches/arjuna-class-11"
+                  href="/engineering-batches/arjuna-class-11"
                   className="dropright-item"
                 >
                   <i
@@ -302,7 +302,7 @@ const Navbar = () => {
                   Arjuna
                 </Link>
                 <Link
-                  to="/engineering-batches/chaitanya-class-12"
+                  href="/engineering-batches/chaitanya-class-12"
                   className="dropright-item"
                 >
                   <i
@@ -312,7 +312,7 @@ const Navbar = () => {
                   Chaitanya
                 </Link>
                 <Link
-                  to="/engineering-batches/eklavya-class-13"
+                  href="/engineering-batches/eklavya-class-13"
                   className="dropright-item"
                 >
                   <i
@@ -325,7 +325,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Medical</h3>
                 <Link
-                  to="/medical-batches/ananta-class-11"
+                  href="/medical-batches/ananta-class-11"
                   className="dropright-item"
                 >
                   <i
@@ -335,7 +335,7 @@ const Navbar = () => {
                   Ananta
                 </Link>
                 <Link
-                  to="/medical-batches/sudarshan-class-12"
+                  href="/medical-batches/sudarshan-class-12"
                   className="dropright-item"
                 >
                   <i
@@ -345,7 +345,7 @@ const Navbar = () => {
                   Sudarshan
                 </Link>
                 <Link
-                  to="/medical-batches/swadhyaya-class-13"
+                  href="/medical-batches/swadhyaya-class-13"
                   className="dropright-item"
                 >
                   <i
@@ -358,7 +358,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Foundation</h3>
                 <Link
-                  to="/foundation-batches/aadhya-class-06"
+                  href="/foundation-batches/aadhya-class-06"
                   className="dropright-item"
                 >
                   <i
@@ -368,7 +368,7 @@ const Navbar = () => {
                   Aadhya
                 </Link>
                 <Link
-                  to="/foundation-batches/abhinav-class-07"
+                  href="/foundation-batches/abhinav-class-07"
                   className="dropright-item"
                 >
                   <i
@@ -378,7 +378,7 @@ const Navbar = () => {
                   Abhinav
                 </Link>
                 <Link
-                  to="/foundation-batches/abhyas-class-08"
+                  href="/foundation-batches/abhyas-class-08"
                   className="dropright-item"
                 >
                   <i
@@ -388,7 +388,7 @@ const Navbar = () => {
                   Abhyas
                 </Link>
                 <Link
-                  to="/foundation-batches/aarohan-class-09"
+                  href="/foundation-batches/aarohan-class-09"
                   className="dropright-item"
                 >
                   <i
@@ -398,7 +398,7 @@ const Navbar = () => {
                   Aarohan
                 </Link>
                 <Link
-                  to="/foundation-batches/atal-class-10"
+                  href="/foundation-batches/atal-class-10"
                   className="dropright-item"
                 >
                   <i
@@ -411,7 +411,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>DLP</h3>
                 <Link
-                  to="/foundation-batches/sankalp-class-10-distance"
+                  href="/foundation-batches/sankalp-class-10-distance"
                   className="dropright-item"
                 >
                   <i
@@ -421,7 +421,7 @@ const Navbar = () => {
                   Sankalp
                 </Link>
                 <Link
-                  to="/engineering-batches/utkarsh-class-11-distance"
+                  href="/engineering-batches/utkarsh-class-11-distance"
                   className="dropright-item"
                 >
                   <i
@@ -431,7 +431,7 @@ const Navbar = () => {
                   Utkarsh
                 </Link>
                 <Link
-                  to="/engineering-batches/lakshya-class-12-distance"
+                  href="/engineering-batches/lakshya-class-12-distance"
                   className="dropright-item"
                 >
                   <i
@@ -441,7 +441,7 @@ const Navbar = () => {
                   Lakshya
                 </Link>
                 <Link
-                  to="/engineering-batches/abhiyaan-class-13-distance"
+                  href="/engineering-batches/abhiyaan-class-13-distance"
                   className="dropright-item"
                 >
                   <i
@@ -451,7 +451,7 @@ const Navbar = () => {
                   Abhiyaan
                 </Link>
                 <Link
-                  to="/medical-batches/yukti-class-11-distance"
+                  href="/medical-batches/yukti-class-11-distance"
                   className="dropright-item"
                 >
                   <i
@@ -461,7 +461,7 @@ const Navbar = () => {
                   Yukti
                 </Link>
                 <Link
-                  to="/medical-batches/sarthak-class-12-distance"
+                  href="/medical-batches/sarthak-class-12-distance"
                   className="dropright-item"
                 >
                   <i
@@ -471,7 +471,7 @@ const Navbar = () => {
                   Sarthak
                 </Link>
                 <Link
-                  to="/medical-batches/pragya-class-13-distance"
+                  href="/medical-batches/pragya-class-13-distance"
                   className="dropright-item"
                 >
                   <i
@@ -484,7 +484,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Boards</h3>
                 <Link
-                  to="/board-batches/sammarsa-class-11-pcm"
+                  href="/board-batches/sammarsa-class-11-pcm"
                   className="dropright-item"
                 >
                   <i
@@ -494,7 +494,7 @@ const Navbar = () => {
                   Sammarsa
                 </Link>
                 <Link
-                  to="/board-batches/vikash-class-12-pcm"
+                  href="/board-batches/vikash-class-12-pcm"
                   className="dropright-item"
                 >
                   <i
@@ -504,7 +504,7 @@ const Navbar = () => {
                   Vikash
                 </Link>
                 <Link
-                  to="/board-batches/daksh-class-11-pcb"
+                  href="/board-batches/daksh-class-11-pcb"
                   className="dropright-item"
                 >
                   <i
@@ -514,7 +514,7 @@ const Navbar = () => {
                   Daksh
                 </Link>
                 <Link
-                  to="/board-batches/samridhi-class-12-pcb"
+                  href="/board-batches/samridhi-class-12-pcb"
                   className="dropright-item"
                 >
                   <i
@@ -538,7 +538,7 @@ const Navbar = () => {
       >
         <Link
           className="nav-link dropdown-toggle"
-          href=" "
+          href="#"
           role="button"
           style={{
             border: "none",
@@ -558,7 +558,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Engineering</h3>
                 <Link
-                  to="/engineering-batches/arjuna-class-11"
+                  href="/engineering-batches/arjuna-class-11"
                   className="dropright-item"
                 >
                   <i
@@ -571,7 +571,7 @@ const Navbar = () => {
                   Arjuna
                 </Link>
                 <Link
-                  to="/engineering-batches/chaitanya-class-12"
+                  href="/engineering-batches/chaitanya-class-12"
                   className="dropright-item"
                 >
                   <i
@@ -581,7 +581,7 @@ const Navbar = () => {
                   Chaitanya
                 </Link>
                 <Link
-                  to="/engineering-batches/eklavya-class-13"
+                  href="/engineering-batches/eklavya-class-13"
                   className="dropright-item"
                 >
                   <i
@@ -594,7 +594,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Medical</h3>
                 <Link
-                  to="/medical-batches/ananta-class-11"
+                  href="/medical-batches/ananta-class-11"
                   className="dropright-item"
                 >
                   <i
@@ -604,7 +604,7 @@ const Navbar = () => {
                   Ananta
                 </Link>
                 <Link
-                  to="/medical-batches/sudarshan-class-12"
+                  href="/medical-batches/sudarshan-class-12"
                   className="dropright-item"
                 >
                   <i
@@ -614,7 +614,7 @@ const Navbar = () => {
                   Sudarshan
                 </Link>
                 <Link
-                  to="/medical-batches/swadhyaya-class-13"
+                  href="/medical-batches/swadhyaya-class-13"
                   className="dropright-item"
                 >
                   <i
@@ -627,7 +627,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Foundation</h3>
                 <Link
-                  to="/foundation-batches/aadhya-class-06"
+                  href="/foundation-batches/aadhya-class-06"
                   className="dropright-item"
                 >
                   <i
@@ -637,7 +637,7 @@ const Navbar = () => {
                   Aadhya
                 </Link>
                 <Link
-                  to="/foundation-batches/abhinav-class-07"
+                  href="/foundation-batches/abhinav-class-07"
                   className="dropright-item"
                 >
                   <i
@@ -647,7 +647,7 @@ const Navbar = () => {
                   Abhinav
                 </Link>
                 <Link
-                  to="/foundation-batches/abhyas-class-08"
+                  href="/foundation-batches/abhyas-class-08"
                   className="dropright-item"
                 >
                   <i
@@ -657,7 +657,7 @@ const Navbar = () => {
                   Abhyas
                 </Link>
                 <Link
-                  to="/foundation-batches/aarohan-class-09"
+                  href="/foundation-batches/aarohan-class-09"
                   className="dropright-item"
                 >
                   <i
@@ -667,7 +667,7 @@ const Navbar = () => {
                   Aarohan
                 </Link>
                 <Link
-                  to="/foundation-batches/atal-class-10"
+                  href="/foundation-batches/atal-class-10"
                   className="dropright-item"
                 >
                   <i
@@ -680,7 +680,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>DLP</h3>
                 <Link
-                  to="/foundation-batches/sankalp-class-10-distance"
+                  href="/foundation-batches/sankalp-class-10-distance"
                   className="dropright-item"
                 >
                   <i
@@ -690,7 +690,7 @@ const Navbar = () => {
                   Sankalp
                 </Link>
                 <Link
-                  to="/engineering-batches/utkarsh-class-11-distance"
+                  href="/engineering-batches/utkarsh-class-11-distance"
                   className="dropright-item"
                 >
                   <i
@@ -700,7 +700,7 @@ const Navbar = () => {
                   Utkarsh
                 </Link>
                 <Link
-                  to="/engineering-batches/lakshya-class-12-distance"
+                  href="/engineering-batches/lakshya-class-12-distance"
                   className="dropright-item"
                 >
                   <i
@@ -710,7 +710,7 @@ const Navbar = () => {
                   Lakshya
                 </Link>
                 <Link
-                  to="/engineering-batches/abhiyaan-class-13-distance"
+                  href="/engineering-batches/abhiyaan-class-13-distance"
                   className="dropright-item"
                 >
                   <i
@@ -720,7 +720,7 @@ const Navbar = () => {
                   Abhiyaan
                 </Link>
                 <Link
-                  to="/medical-batches/yukti-class-11-distance"
+                  href="/medical-batches/yukti-class-11-distance"
                   className="dropright-item"
                 >
                   <i
@@ -730,7 +730,7 @@ const Navbar = () => {
                   Yukti
                 </Link>
                 <Link
-                  to="/medical-batches/sarthak-class-12-distance"
+                  href="/medical-batches/sarthak-class-12-distance"
                   className="dropright-item"
                 >
                   <i
@@ -740,7 +740,7 @@ const Navbar = () => {
                   Sarthak
                 </Link>
                 <Link
-                  to="/medical-batches/pragya-class-13-distance"
+                  href="/medical-batches/pragya-class-13-distance"
                   className="dropright-item"
                 >
                   <i
@@ -753,7 +753,7 @@ const Navbar = () => {
               <div className="column">
                 <h3>Boards</h3>
                 <Link
-                  to="/board-batches/sammarsa-class-11-pcm"
+                  href="/board-batches/sammarsa-class-11-pcm"
                   className="dropright-item"
                 >
                   <i
@@ -763,7 +763,7 @@ const Navbar = () => {
                   Sammarsa
                 </Link>
                 <Link
-                  to="/board-batches/vikash-class-12-pcm"
+                  href="/board-batches/vikash-class-12-pcm"
                   className="dropright-item"
                 >
                   <i
@@ -773,7 +773,7 @@ const Navbar = () => {
                   Vikash
                 </Link>
                 <Link
-                  to="/board-batches/daksh-class-11-pcb"
+                  href="/board-batches/daksh-class-11-pcb"
                   className="dropright-item"
                 >
                   <i
@@ -783,7 +783,7 @@ const Navbar = () => {
                   Daksh
                 </Link>
                 <Link
-                  to="/board-batches/samridhi-class-12-pcb"
+                  href="/board-batches/samridhi-class-12-pcb"
                   className="dropright-item"
                 >
                   <i
@@ -814,7 +814,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             {/*<div className="header-col3">
-              <Link to="/Admission-form" className="header-col12">
+              <Link href="/Admission-form" className="header-col12">
                 <img src={admission} alt="" />
               </Link>
             </div>*/}
@@ -860,7 +860,7 @@ const Navbar = () => {
                       }}
                     >
                       <Link
-                        to="/"
+                        href="/"
                         className="nav-link"
                         activeclassname="active"
                         style={{
@@ -875,7 +875,7 @@ const Navbar = () => {
                     <li className="nav-item dropdown hover">
                       <Link
                         className="nav-link dropdown-toggle"
-                        href=""
+                        href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         style={{
@@ -894,7 +894,7 @@ const Navbar = () => {
                       <ul className="dropdown-menu">
                         <li>
                           <Link
-                            to="/about-iit-academy"
+                            href="/about-iit-academy"
                             className="dropdown-item"
                           >
                             <i
@@ -906,7 +906,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/director-message"
+                            href="/director-message"
                             className="dropdown-item"
                           >
                             <i
@@ -918,7 +918,10 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                          <Link to="/why-iit-academy" className="dropdown-item">
+                          <Link
+                            href="/why-iit-academy"
+                            className="dropdown-item"
+                          >
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -928,7 +931,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/iit-academy-scholarship-test"
+                            href="/iit-academy-scholarship-test"
                             className="dropdown-item"
                           >
                             <i
@@ -940,7 +943,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/frequently-asked-questions"
+                            href="/frequently-asked-questions"
                             className="dropdown-item"
                           >
                             <i
@@ -951,7 +954,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to=" " className="dropdown-item">
+                          <Link href="#" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -987,7 +990,10 @@ const Navbar = () => {
                       </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <Link to="/fees-structure" className="dropdown-item">
+                          <Link
+                            href="/fees-structure"
+                            className="dropdown-item"
+                          >
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -997,7 +1003,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/admission-process"
+                            href="/admission-process"
                             className="dropdown-item"
                           >
                             <i
@@ -1009,7 +1015,7 @@ const Navbar = () => {
                         </li>
                         {/* <li>
                         <Link
-                          to="/our-policy-iit-academy"
+                          href="/our-policy-iit-academy"
                           className="dropdown-item"
                         >
                           <i
@@ -1030,7 +1036,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/admission-enquiry"
+                            href="/admission-enquiry"
                             className="dropdown-item"
                           >
                             <i
@@ -1041,7 +1047,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/our-policy" className="dropdown-item">
+                          <Link href="/our-policy" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1060,6 +1066,7 @@ const Navbar = () => {
                     >
                       <Link
                         className="nav-link dropdown-toggle"
+                        href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         style={{
@@ -1076,7 +1083,10 @@ const Navbar = () => {
                       </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <Link to="/students-login" className="dropdown-item">
+                          <Link
+                            href="/students-login"
+                            className="dropdown-item"
+                          >
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1085,7 +1095,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/faculty-login" className="dropdown-item">
+                          <Link href="/faculty-login" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1102,6 +1112,7 @@ const Navbar = () => {
                       <Link
                         className="nav-link dropdown-toggle"
                         role="button"
+                        href="#"
                         data-bs-toggle="dropdown"
                         style={{
                           border: "none",
@@ -1117,7 +1128,7 @@ const Navbar = () => {
                       </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <Link to="/careers" className="dropdown-item">
+                          <Link href="/careers" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1126,7 +1137,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/internship" className="dropdown-item">
+                          <Link href="/internship" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1135,7 +1146,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/blogs" className="dropdown-item">
+                          <Link href="/blogs" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1154,7 +1165,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="https://drive.google.com/file/d/1KEbgiKjF3quvUXWp8hM0KlDqeqZiL0LL/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1KEbgiKjF3quvUXWp8hM0KlDqeqZiL0LL/view?usp=sharing"
                             className="dropdown-item"
                             target="_blank"
                           >
@@ -1197,7 +1208,7 @@ const Navbar = () => {
                       }}
                     >
                       <Link
-                        to="/"
+                        href="/"
                         className="nav-link"
                         activeclassname="active"
                         style={{
@@ -1212,7 +1223,7 @@ const Navbar = () => {
                     <li className="nav-item dropdown hover">
                       <Link
                         className="nav-link dropdown-toggle"
-                        href=""
+                        href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         style={{
@@ -1229,7 +1240,7 @@ const Navbar = () => {
                       <ul className="dropdown-menu">
                         <li>
                           <Link
-                            to="/about-iit-academy"
+                            href="/about-iit-academy"
                             className="dropdown-item"
                           >
                             <i
@@ -1241,7 +1252,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/director-message"
+                            href="/director-message"
                             className="dropdown-item"
                           >
                             <i
@@ -1253,7 +1264,10 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                          <Link to="/why-iit-academy" className="dropdown-item">
+                          <Link
+                            href="/why-iit-academy"
+                            className="dropdown-item"
+                          >
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1263,7 +1277,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/iit-academy-scholarship-test"
+                            href="/iit-academy-scholarship-test"
                             className="dropdown-item"
                           >
                             <i
@@ -1275,7 +1289,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/frequently-asked-questions"
+                            href="/frequently-asked-questions"
                             className="dropdown-item"
                           >
                             <i
@@ -1286,7 +1300,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to=" " className="dropdown-item">
+                          <Link href="/" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1313,7 +1327,10 @@ const Navbar = () => {
                       </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <Link to="/fees-structure" className="dropdown-item">
+                          <Link
+                            href="/fees-structure"
+                            className="dropdown-item"
+                          >
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1323,7 +1340,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/admission-process"
+                            href="/admission-process"
                             className="dropdown-item"
                           >
                             <i
@@ -1335,7 +1352,7 @@ const Navbar = () => {
                         </li>
                         {/* <li>
                         <Link
-                          to="/our-policy-iit-academy"
+                          href="/our-policy-iit-academy"
                           className="dropdown-item"
                         >
                           <i
@@ -1356,7 +1373,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="/admission-enquiry"
+                            href="/admission-enquiry"
                             className="dropdown-item"
                           >
                             <i
@@ -1367,7 +1384,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/our-policy" className="dropdown-item">
+                          <Link href="/our-policy" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1388,6 +1405,7 @@ const Navbar = () => {
                     >
                       <Link
                         className="nav-link dropdown-toggle"
+                        href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         style={{ border: "none", color: "White" }}
@@ -1397,7 +1415,10 @@ const Navbar = () => {
                       </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <Link to="/students-login" className="dropdown-item">
+                          <Link
+                            href="/students-login"
+                            className="dropdown-item"
+                          >
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1406,7 +1427,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/faculty-login" className="dropdown-item">
+                          <Link href="/faculty-login" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1467,7 +1488,7 @@ const Navbar = () => {
                             Boards
                           </div>
                         </li>
-                        {/* Link to="/" */}
+                        {/* Link href="/" */}
                         <li>
                           <div className="dropdown-item">
                             <i
@@ -1495,7 +1516,7 @@ const Navbar = () => {
                       </Link>
                       <ul className="dropdown-menu">
                         <li>
-                          <Link to="/careers" className="dropdown-item">
+                          <Link href="/careers" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1504,7 +1525,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/internship" className="dropdown-item">
+                          <Link href="/internship" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1513,7 +1534,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/blogs" className="dropdown-item">
+                          <Link href="/blogs" className="dropdown-item">
                             <i
                               className="fas fa-angle-double-right"
                               style={{ color: "#f39c12", marginRight: "5px" }}
@@ -1532,7 +1553,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            to="https://drive.google.com/file/d/1KEbgiKjF3quvUXWp8hM0KlDqeqZiL0LL/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1KEbgiKjF3quvUXWp8hM0KlDqeqZiL0LL/view?usp=sharing"
                             className="dropdown-item"
                             target="_blank"
                           >

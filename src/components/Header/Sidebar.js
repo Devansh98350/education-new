@@ -1,10 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation'; // For active link detection
+import { usePathname } from "next/navigation"; // For active link detection
 import styled from "styled-components";
 import mainlogo from "../../../public/assets/homepage/IIT_Academy.webp";
-
+const NavLink = ({ href, children, className }) => (
+  <Link href={href || "#"} passHref>
+    <StyledAnchor className={className}>{children}</StyledAnchor>
+  </Link>
+);
 const StyledSidebarContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -120,23 +124,6 @@ const CloseButton = styled.a`
   cursor: pointer;
   color: black; /* Add your desired color */
 `;
-// Styled component for the NavLink (navigation link)
-const StyledNavLink = styled(NavLink)`
-  color: white;
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  transition: 0.3s;
-  background-color: red;
-  &:hover {
-    background-color: #555;
-  }
-
-  &.active {
-    background-color: blue;
-  }
-`;
-
 // Styled component for the dropdown menu
 const DropdownMenu = styled.ul`
   list-style-type: none;
@@ -174,7 +161,7 @@ const DropdownMenu1 = styled.ul`
 `;
 
 // Styled component for the dropdown toggle (navigation link with dropdown)
-const DropdownToggle = styled(StyledNavLink)`
+const DropdownToggle = styled(NavLink)`
   color: white;
   display: block;
   padding: 1px 1px;
@@ -190,7 +177,7 @@ const DropdownToggle = styled(StyledNavLink)`
     background-color: #2904f9;
   }
 `;
-const DropdownToggle1 = styled(StyledNavLink)`
+const DropdownToggle1 = styled(NavLink)`
   color: blue;
   display: block;
   padding: 10px 15px;
@@ -213,6 +200,22 @@ const DropdownItem = styled.li`
 
   &:hover {
     background-color: #555;
+  }
+`;
+const StyledAnchor = styled.a`
+  color: white;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: red;
+
+  &:hover {
+    background-color: #555;
+  }
+
+  &.active {
+    background-color: blue;
   }
 `;
 
@@ -250,11 +253,11 @@ const Sidebar = () => {
               <Image src={mainlogo} alt="IIT Academy logo" />
             </Details>
 
-            <StyledNavLink to="/" exact>
+            <NavLink href="/" exact>
               Home
-            </StyledNavLink>
+            </NavLink>
             <DropdownToggle
-              to="#"
+              href="#"
               onClick={() => toggleDropdown("about")}
               className="dropdown-toggle"
             >
@@ -263,44 +266,35 @@ const Sidebar = () => {
             {dropdownOpen.about && (
               <DropdownMenu>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/about-iit-academy"
-                    className="dropdown-item"
-                  >
+                  <NavLink href="/about-iit-academy" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     IIT Academy
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/director-message"
-                    className="dropdown-item"
-                  >
+                  <NavLink href="/director-message" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     Welcome Message
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/why-iit-academy"
-                    className="dropdown-item"
-                  >
+                  <NavLink href="/why-iit-academy" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Why IIT Academy
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/iit-academy-scholarship-test"
+                  <NavLink
+                    href="/iit-academy-scholarship-test"
                     className="dropdown-item"
                   >
                     <i
@@ -308,11 +302,11 @@ const Sidebar = () => {
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     IAST
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/frequently-asked-questions"
+                  <NavLink
+                    href="/frequently-asked-questions"
                     className="dropdown-item"
                   >
                     <i
@@ -320,21 +314,21 @@ const Sidebar = () => {
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     FAQ&apos;s
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink to=" " className="dropdown-item">
+                  <NavLink href="/" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     Gallery
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             )}
             <DropdownToggle
-              to="#"
+              href="#"
               onClick={() => toggleDropdown("admission")}
               className="dropdown-toggle"
             >
@@ -343,60 +337,54 @@ const Sidebar = () => {
             {dropdownOpen.admission && (
               <DropdownMenu>
                 <DropdownItem>
-                  <StyledNavLink to="/fees-structure" className="dropdown-item">
+                  <NavLink href="/fees-structure" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Fee Structure
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/admission-process"
-                    className="dropdown-item"
-                  >
+                  <NavLink href="/admission-process" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Admission Process
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink to=" " className="dropdown-item">
+                  <NavLink href="/" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     Pay Fees Online
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink
-                    to="/admission-enquiry"
-                    className="dropdown-item"
-                  >
+                  <NavLink href="/admission-enquiry" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     Admission Enquiry
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink to="/our-policy" className="dropdown-item">
+                  <NavLink href="/our-policy" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     Privacy policy
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             )}
             <DropdownToggle
-              to="#"
+              href="#"
               onClick={() => toggleDropdown("batches")}
               className="dropdown-toggle"
             >
@@ -405,7 +393,7 @@ const Sidebar = () => {
             {dropdownOpen.batches && (
               <DropdownMenu1>
                 <DropdownToggle1
-                  to="#"
+                  href="#"
                   onClick={() => toggleDropdown("engineering")}
                   className="dropdown-toggle"
                 >
@@ -414,8 +402,8 @@ const Sidebar = () => {
                 {dropdownOpen.engineering && (
                   <DropdownMenu>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/engineering-batches/arjuna-class-11"
+                      <NavLink
+                        href="/engineering-batches/arjuna-class-11"
                         className="dropdown-item"
                       >
                         <i
@@ -423,11 +411,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Arjuna
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/engineering-batches/chaitanya-class-12"
+                      <NavLink
+                        href="/engineering-batches/chaitanya-class-12"
                         className="dropdown-item"
                       >
                         <i
@@ -435,11 +423,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Chaitanya
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/engineering-batches/eklavya-class-13"
+                      <NavLink
+                        href="/engineering-batches/eklavya-class-13"
                         className="dropdown-item"
                       >
                         <i
@@ -447,12 +435,12 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Eklavya
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 )}
                 <DropdownToggle1
-                  to="#"
+                  href="#"
                   onClick={() => toggleDropdown("medical")}
                   className="dropdown-toggle"
                 >
@@ -461,8 +449,8 @@ const Sidebar = () => {
                 {dropdownOpen.medical && (
                   <DropdownMenu>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/medical-batches/ananta-class-11"
+                      <NavLink
+                        href="/medical-batches/ananta-class-11"
                         className="dropdown-item"
                       >
                         <i
@@ -470,11 +458,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Ananta
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/medical-batches/sudarshan-class-12"
+                      <NavLink
+                        href="/medical-batches/sudarshan-class-12"
                         className="dropdown-item"
                       >
                         <i
@@ -482,11 +470,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Sudarshan
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/medical-batches/swadhyaya-class-13"
+                      <NavLink
+                        href="/medical-batches/swadhyaya-class-13"
                         className="dropdown-item"
                       >
                         <i
@@ -494,12 +482,12 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Swadhyaya
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 )}
                 <DropdownToggle1
-                  to="#"
+                  href="#"
                   onClick={() => toggleDropdown("foundation")}
                   className="dropdown-toggle"
                 >
@@ -508,8 +496,8 @@ const Sidebar = () => {
                 {dropdownOpen.foundation && (
                   <DropdownMenu>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/foundation-batches/aadhya-class-06"
+                      <NavLink
+                        href="/foundation-batches/aadhya-class-06"
                         className="dropdown-item"
                       >
                         <i
@@ -517,11 +505,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Aadhya
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/foundation-batches/abhinav-class-07"
+                      <NavLink
+                        href="/foundation-batches/abhinav-class-07"
                         className="dropdown-item"
                       >
                         <i
@@ -529,11 +517,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Abhinav
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/foundation-batches/abhyas-class-08"
+                      <NavLink
+                        href="/foundation-batches/abhyas-class-08"
                         className="dropdown-item"
                       >
                         <i
@@ -541,11 +529,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Abhyas
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/foundation-batches/aarohan-class-09"
+                      <NavLink
+                        href="/foundation-batches/aarohan-class-09"
                         className="dropdown-item"
                       >
                         <i
@@ -553,11 +541,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Aarohan
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/foundation-batches/atal-class-10"
+                      <NavLink
+                        href="/foundation-batches/atal-class-10"
                         className="dropdown-item"
                       >
                         <i
@@ -565,12 +553,12 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Atal
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 )}
                 <DropdownToggle1
-                  to="#"
+                  href="#"
                   onClick={() => toggleDropdown("distance")}
                   className="dropdown-toggle"
                 >
@@ -579,8 +567,8 @@ const Sidebar = () => {
                 {dropdownOpen.distance && (
                   <DropdownMenu>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/foundation-batches/sankalp-class-10-distance"
+                      <NavLink
+                        href="/foundation-batches/sankalp-class-10-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -588,11 +576,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Sankalp
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/engineering-batches/utkarsh-class-11-distance"
+                      <NavLink
+                        href="/engineering-batches/utkarsh-class-11-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -600,11 +588,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Utkarsh
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/engineering-batches/lakshya-class-12-distance"
+                      <NavLink
+                        href="/engineering-batches/lakshya-class-12-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -612,11 +600,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Lakshya
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/engineering-batches/abhiyaan-class-13-distance"
+                      <NavLink
+                        href="/engineering-batches/abhiyaan-class-13-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -624,11 +612,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Abhiyaan
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/medical-batches/yukti-class-11-distance"
+                      <NavLink
+                        href="/medical-batches/yukti-class-11-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -636,11 +624,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Yukti
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/medical-batches/sarthak-class-12-distance"
+                      <NavLink
+                        href="/medical-batches/sarthak-class-12-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -648,11 +636,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Sarthak
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/medical-batches/pragya-class-13-distance"
+                      <NavLink
+                        href="/medical-batches/pragya-class-13-distance"
                         className="dropdown-item"
                       >
                         <i
@@ -660,12 +648,12 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Pragya
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 )}
                 <DropdownToggle1
-                  to="#"
+                  href="#"
                   onClick={() => toggleDropdown("boards")}
                   className="dropdown-toggle"
                 >
@@ -674,8 +662,8 @@ const Sidebar = () => {
                 {dropdownOpen.boards && (
                   <DropdownMenu>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/board-batches/sammarsa-class-11-pcm"
+                      <NavLink
+                        href="/board-batches/sammarsa-class-11-pcm"
                         className="dropdown-item"
                       >
                         <i
@@ -683,11 +671,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Sammarsa
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/board-batches/vikash-class-12-pcm"
+                      <NavLink
+                        href="/board-batches/vikash-class-12-pcm"
                         className="dropdown-item"
                       >
                         <i
@@ -695,11 +683,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>
                         Vikash
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/board-batches/daksh-class-11-pcb"
+                      <NavLink
+                        href="/board-batches/daksh-class-11-pcb"
                         className="dropdown-item"
                       >
                         <i
@@ -707,11 +695,11 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Daksh
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <StyledNavLink
-                        to="/board-batches/samridhi-class-12-pcb"
+                      <NavLink
+                        href="/board-batches/samridhi-class-12-pcb"
                         className="dropdown-item"
                       >
                         <i
@@ -719,7 +707,7 @@ const Sidebar = () => {
                           style={{ color: "#f39c12", marginRight: "5px" }}
                         ></i>{" "}
                         Samridhi
-                      </StyledNavLink>
+                      </NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 )}
@@ -727,7 +715,7 @@ const Sidebar = () => {
             )}
 
             <DropdownToggle
-              to="#"
+              href="#"
               onClick={() => toggleDropdown("login")}
               className="dropdown-toggle"
             >
@@ -736,27 +724,27 @@ const Sidebar = () => {
             {dropdownOpen.login && (
               <DropdownMenu>
                 <DropdownItem>
-                  <StyledNavLink to="/students-login" className="dropdown-item">
+                  <NavLink href="/students-login" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Students
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink to="/faculty-login" className="dropdown-item">
+                  <NavLink href="/faculty-login" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Faculty
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             )}
             <DropdownToggle
-              to="#"
+              href="#"
               onClick={() => toggleDropdown("result")}
               className="dropdown-toggle"
             >
@@ -817,7 +805,7 @@ const Sidebar = () => {
               </DropdownMenu>
             )}
             <DropdownToggle
-              to="#"
+              href="#"
               onClick={() => toggleDropdown("contact")}
               className="dropdown-toggle"
             >
@@ -826,41 +814,41 @@ const Sidebar = () => {
             {dropdownOpen.contact && (
               <DropdownMenu>
                 <DropdownItem>
-                  <StyledNavLink to="/careers" className="dropdown-item">
+                  <NavLink href="/careers" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Careers
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink to="/internship" className="dropdown-item">
+                  <NavLink href="/internship" className="dropdown-item">
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>{" "}
                     Internship
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <StyledNavLink to=" " className="dropdown-item">
+                  <NavLink href="#" className="dropdown-item">
                     {" "}
                     <i
                       className="fas fa-angle-double-right"
                       style={{ color: "#f39c12", marginRight: "5px" }}
                     ></i>
                     Contact Us
-                  </StyledNavLink>
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             )}
 
-            <DropdownToggle to="/blogs">Blogs</DropdownToggle>
+            <DropdownToggle href="/blogs">Blogs</DropdownToggle>
 
-            <StyledNavLink to="https://drive.google.com/file/d/1KEbgiKjF3quvUXWp8hM0KlDqeqZiL0LL/view?usp=sharing">
+            <NavLink href="https://drive.google.com/file/d/1KEbgiKjF3quvUXWp8hM0KlDqeqZiL0LL/view?usp=sharing">
               Brochure
-            </StyledNavLink>
+            </NavLink>
           </div>
         </SidebarContent>
       )}
