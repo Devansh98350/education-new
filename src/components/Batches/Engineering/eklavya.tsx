@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./Engineering.css";
-import img from "../../../../public/assets/batches/Arjuna.webp";
+import img from "../../../../public/assets/batches/Eklavya.webp";
 import Benefits from "../Common/Benefits";
 import Breadcrumbs from "../../Breadcrumbs";
 import Image from "next/image";
 
-const E_Eleven = () => {
+const E_Thirteen = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     const handleContextMenu = (event: MouseEvent) => {
@@ -22,7 +22,6 @@ const E_Eleven = () => {
       document.removeEventListener("contextmenu", handleContextMenu);
     };
   }, []);
-
   return (
     <>
       <Breadcrumbs />
@@ -31,28 +30,35 @@ const E_Eleven = () => {
           <Image src={img} alt="Loading..." unoptimized />
         </div>
         <div className="about">
-          <h1>Why Arjuna?</h1>
+          <h1>Why Eklavya?</h1>
           <p>
             <i
               className="fas fa-angle-double-right"
               style={{ color: "#f39c12", marginRight: "5px" }}
             ></i>
-            Arjuna Course is specially designed for giving an early advantage to
-            the students by starting JEE (Main+Advanced) preparation immediately
-            after 10th Board Examination. The course lays special emphasis on
-            the fundamentals for relevant to the syllabus and pattern of JEE
-            (Main + Advanced). Students will be given through mentorship for
-            class XI preparation and focused guidance for the preparation of
-            other competitive exams like Olympiads etc.
+            Eklavya Course is specially designed of students who would be taking
+            their Class XII board exams in 2024 and are willing to dedicate one
+            year for the preparation of JEE-Advanced 2025. This course has been
+            designed for students who intend to retake JEE(Main+Advance) in 2025
+            for a better rank. It is also of utmost importance for those
+            students who have not undergone specialized Coaching/ Training for
+            JEE (Main+Advanced) during their Class XI & XII.
           </p>
           <p>
             <i
               className="fas fa-angle-double-right"
               style={{ color: "#f39c12", marginRight: "5px" }}
             ></i>
-            Students joining this program have more time to clear their
-            fundamentals and practice extensively for JEE (Advanced), their
-            ultimate goal!
+            In this Course, Entire syllabus of class XI & XII will be covered.
+          </p>
+          <p>
+            <i
+              className="fas fa-angle-double-right"
+              style={{ color: "#f39c12", marginRight: "5px" }}
+            ></i>
+            Students joining this program are mentored to do focussed study for
+            one year to utilise remaining time for preparation of JEE
+            (Main+Advanced), their ultimate goal!
           </p>
         </div>
         <div className="details" id="details">
@@ -60,13 +66,13 @@ const E_Eleven = () => {
 
           <div className="detail-box">
             <h5 className="heading-box">
-              Fee Structure For ARJUNA Course (1 Year)
+              Fee Structure For EKLAVYA Course (1 Year)
             </h5>
             <table className="fees-table">
               <thead>
                 <tr>
                   <th className="table-head">
-                    Admission + Infra. + Study material fee
+                    Admission + Infra. + Study material free
                   </th>
                   <th className="table-head">Tution Fee(TF)</th>
                   <th className="table-head">Caution Money</th>
@@ -80,15 +86,14 @@ const E_Eleven = () => {
               <tbody>
                 <tr>
                   <td>3100</td>
-                  <td>22500</td>
-                  <td>1500</td>
-                  <td>27100</td>
-                  <td>17100</td>
-                  <td>10000</td>
+                  <td>35500</td>
+                  <td>2500</td>
+                  <td>41100</td>
+                  <td>24100</td>
+                  <td>17000</td>
                 </tr>
               </tbody>
             </table>
-
             <p className="details-para">
               1st Installment is 60% of the total fee & 2nd Installment is 40%
               in Single Year Course. 1st Installment at the time of admission
@@ -127,7 +132,7 @@ const E_Eleven = () => {
                         className="btn-one buttn"
                         style={{ backgroundColor: "green" }}
                       >
-                        Apply Online
+                        Click here{" "}
                       </Link>
                     </li>
                   </ul>
@@ -157,10 +162,11 @@ const E_Eleven = () => {
             </div>
           </div>
         </div>
-        <Benefits />
       </section>
+
+      <Benefits />
     </>
   );
 };
 
-export default E_Eleven;
+export default E_Thirteen;

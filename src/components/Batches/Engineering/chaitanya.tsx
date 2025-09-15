@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./Engineering.css";
-import img from "../../../../public/assets/batches/Arjuna.webp";
+import img from "../../../../public/assets/batches/Chaitanya.webp";
 import Benefits from "../Common/Benefits";
 import Breadcrumbs from "../../Breadcrumbs";
 import Image from "next/image";
 
-const E_Eleven = () => {
+const E_Twelve = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     const handleContextMenu = (event: MouseEvent) => {
@@ -22,7 +22,6 @@ const E_Eleven = () => {
       document.removeEventListener("contextmenu", handleContextMenu);
     };
   }, []);
-
   return (
     <>
       <Breadcrumbs />
@@ -31,26 +30,24 @@ const E_Eleven = () => {
           <Image src={img} alt="Loading..." unoptimized />
         </div>
         <div className="about">
-          <h1>Why Arjuna?</h1>
+          <h1>Why Chaitanya?</h1>
           <p>
             <i
               className="fas fa-angle-double-right"
               style={{ color: "#f39c12", marginRight: "5px" }}
             ></i>
-            Arjuna Course is specially designed for giving an early advantage to
-            the students by starting JEE (Main+Advanced) preparation immediately
-            after 10th Board Examination. The course lays special emphasis on
-            the fundamentals for relevant to the syllabus and pattern of JEE
-            (Main + Advanced). Students will be given through mentorship for
-            class XI preparation and focused guidance for the preparation of
-            other competitive exams like Olympiads etc.
+            Chaitanya Course is specially designed to focus on JEE
+            (Main+Advanced) preparation for students moving from class 11th to
+            12th. The course covers complete syllabus of class 12th with whole
+            revision of class 11. Students will also be guided to prepare for
+            12th board examination.
           </p>
           <p>
             <i
               className="fas fa-angle-double-right"
               style={{ color: "#f39c12", marginRight: "5px" }}
             ></i>
-            Students joining this program have more time to clear their
+            Students joining this course are mentored to build up their
             fundamentals and practice extensively for JEE (Advanced), their
             ultimate goal!
           </p>
@@ -60,13 +57,13 @@ const E_Eleven = () => {
 
           <div className="detail-box">
             <h5 className="heading-box">
-              Fee Structure For ARJUNA Course (1 Year)
+              Fee Structure For CHAITANYA Course (1 Year)
             </h5>
             <table className="fees-table">
               <thead>
                 <tr>
                   <th className="table-head">
-                    Admission + Infra. + Study material fee
+                    Admission + Infra. + Study material free
                   </th>
                   <th className="table-head">Tution Fee(TF)</th>
                   <th className="table-head">Caution Money</th>
@@ -80,15 +77,14 @@ const E_Eleven = () => {
               <tbody>
                 <tr>
                   <td>3100</td>
-                  <td>22500</td>
+                  <td>30500</td>
                   <td>1500</td>
-                  <td>27100</td>
-                  <td>17100</td>
-                  <td>10000</td>
+                  <td>35100</td>
+                  <td>20100</td>
+                  <td>15000</td>
                 </tr>
               </tbody>
             </table>
-
             <p className="details-para">
               1st Installment is 60% of the total fee & 2nd Installment is 40%
               in Single Year Course. 1st Installment at the time of admission
@@ -127,7 +123,7 @@ const E_Eleven = () => {
                         className="btn-one buttn"
                         style={{ backgroundColor: "green" }}
                       >
-                        Apply Online
+                        Click here{" "}
                       </Link>
                     </li>
                   </ul>
@@ -157,10 +153,11 @@ const E_Eleven = () => {
             </div>
           </div>
         </div>
-        <Benefits />
       </section>
+
+      <Benefits />
     </>
   );
 };
 
-export default E_Eleven;
+export default E_Twelve;
