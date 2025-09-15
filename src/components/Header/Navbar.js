@@ -809,6 +809,7 @@ const Navbar = () => {
                 src={mainlogo}
                 alt="IIT Academy logo"
                 style={{ height: "75px", width: "auto", marginLeft: "1vw" }}
+                unoptimized
               />
             </Link>
           </div>
@@ -823,12 +824,12 @@ const Navbar = () => {
                 href="https://wa.me/919205704041?text=I have a query.&utm_medium=&utm_campaign=&utm_term=&utm_content=&lang=en"
                 className="navbar-brand"
               >
-                <Image src={whatsapp} alt="" />
+                <Image src={whatsapp} alt="" unoptimized />
               </a>
             </div>
             <div className="header-col22">
               <a href="tel:9205704041" className="navbar-brand">
-                <Image src={call} alt="" />
+                <Image src={call} alt="" unoptimized />
               </a>
             </div>
           </div>
